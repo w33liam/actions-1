@@ -6,23 +6,23 @@ jobs:
     ascii_job:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout repo
-              uses: actions/checkout@v4
+        - name: Checkout repo
+          uses: actions/checkout@v4
 
-            - name: install cowsay
-              run: sudo apt-get install cowsay -y
+        - name: install cowsay
+          run: sudo apt-get install cowsay -y
 
-            - name: Execute cowsay command
-              run: cowsay -f dragon "run for cover, I am a DRAGON...." >> dragon.txt
+        - name: Execute cowsay command
+          run: cowsay -f dragon "run for cover, I am a DRAGON...." >> dragon.txt
 
-            - name: Test File exists
-              run: grep -i "dragon" dragon.txt
+        - name: Test File exists
+          run: grep -i "dragon" dragon.txt
 
-            -name: Read File
-             run: cat dragon.txt
+        - name: Read File
+          run: cat dragon.txt
 
-            - name: List and Read file
-             run: ls -ltra
+        - name: List and Read file
+          run: ls -ltra
 
             #- name: List files
             #  run: ls
